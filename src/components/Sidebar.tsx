@@ -7,9 +7,16 @@ import {
 } from '@mui/material';
 import { routes } from '../app/routes';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { getWorkouts } from '../api/workout';
 
 export default function Sidebar() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    getWorkouts();
+  }, []);
+
   return (
     <Box
       sx={{

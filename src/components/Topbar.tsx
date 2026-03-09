@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, Typography } from '@mui/material';
 
-export default function Topbar() {
+export default function Topbar({ title }: { title: string }) {
   return (
     <AppBar
       position='static'
@@ -12,7 +12,7 @@ export default function Topbar() {
       }}
     >
       <Toolbar>
-        <Typography variant='h6'>Dashboard</Typography>
+        <Typography variant='h6'>{title}</Typography>
       </Toolbar>
     </AppBar>
   );
